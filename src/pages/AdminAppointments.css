@@ -1,0 +1,186 @@
+/* AdminAppointments.css */
+
+/* Layout Styles */
+.admin-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Times New Roman', serif;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  width: 230px;
+  background-color:#008080;
+  /* Teal Theme */
+  color: black;
+  /* Text color changed to black */
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.admin-sidebar ul li a {
+  color: rgb(250, 249, 249);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+
+
+}
+
+.admin-sidebar ul li a.active,
+.admin-sidebar ul li a:hover {
+  background-color: #006666;
+  /* Darker teal on hover */
+  color: rgb(254, 245, 245);
+}
+
+/* Content Area */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-image: url('https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: black;
+}
+
+.admin-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.301);
+  /* White transparent overlay */
+  z-index: 0;
+}
+
+.admin-content>* {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #008080;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Appointments Table */
+.appointments-table-wrapper {
+  overflow-x: auto;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.466);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000;
+}
+
+.appointments-table th {
+  background-color: #e0f7f7;
+  font-weight: bold;
+}
+
+/* Status Styling */
+.status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.canceled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-readonly {
+  font-style: italic;
+  color: #555;
+}
+
+/* Buttons */
+.confirm-btn,
+.cancel-btn {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}

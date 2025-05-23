@@ -1,0 +1,184 @@
+/* Container Styling */
+.admin-prescription-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Times New Roman', serif;
+    background-image: url('https://images.pexels.com/photos/5327916/pexels-photo-5327916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay for text visibility */
+.admin-prescription-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Navigation and Content layer */
+.admin-nav,
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sidebar Navigation */
+.admin-nav {
+    width: 250px;
+    background: rgba(0, 121, 107, 0.85);
+    padding: 20px 0;
+    backdrop-filter: blur(4px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-nav-heading {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.admin-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.admin-nav li {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.admin-nav li:hover {
+    background: rgba(0, 90, 79, 0.9);
+}
+
+.admin-nav li.active {
+    background: rgba(0, 77, 64, 0.95);
+}
+
+.admin-nav li svg {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.admin-nav li a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* Main Content Styling */
+.content {
+    flex: 1;
+    padding: 40px;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.375);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.title {
+    font-size: 30px;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #00796b;
+    margin-right: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* Table Styling */
+.prescription-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.529);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.prescription-table th,
+.prescription-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.prescription-table th {
+    background: #00796b;
+    color: white;
+    font-weight: bold;
+}
+
+.prescription-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.pagination button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.pagination button:hover {
+    background: #005a4f;
+}
+
+.pagination button.active {
+    background: #004d40;
+}
